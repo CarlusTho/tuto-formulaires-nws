@@ -18,28 +18,28 @@
         <p> Grâce à nos stratèges "Inbound marketing", vous avez activé un "Call To Action" et êtes prêt(e) à nous communiquer vos coordonnées. Ce formulaire est pour vous.</p>
         <form id="formulaire" class="pure-form pure-form-aligned" action="/ma-page-de-traitement" method="post">
                 <div class="pure-control-group">
+                    <span id="erreurNom"></span>
                     <label for="name">Nom :</label>
-                <input type="text" id="name" name="user_name" placeholder="Ex: Patrick">
-                <span class="pure-form-message">Veuillez entrer votre Nom.</span>
-
+                <input type="text" id="name" name="user_name">
+                <span class="pure-form-message">This is a required field.</span>
             </div>
 
             <div class="pure-control-group">
-                <label for="mail">E-mail :</label>
-                <input type="email" id="mail" name="user_mail" placeholder="patrick@mail.com">
-                <span class="pure-form-message">Veuillez entrer votre E-mail.</span>
+                <span id="erreurMail"></span>
+                <label for="mail">e-mail :</label>
+                <input type="email" id="mail" name="user_mail">
             </div>
 
             <div class="pure-control-group">
-                <label for="tel">Numero de telephone :</label>
-                <input type="tel" id="tel" name="user_tel" placeholder="0746582059">
-                <span class="pure-form-message">Veuillez entrer votre Téléphone.</span>
+                <span id="erreurTel"></span>
+                <label for="tel">Tel :</label>
+                <input type="tel" id="tel" name="user_tel">
             </div>
 
             <div class="pure-control-group">
+                <span id="erreurMes"></span>
                 <label for="msg">Message :</label>
-                <textarea id="msg" name="user_message" placeholder="Je suis très satisfait"></textarea>
-                <span class="pure-form-message">Veuillez entrer votre Nom.</span>
+                <textarea id="msg" name="user_message"></textarea>
             </div>
 
             <div class="pure-controls">
@@ -47,7 +47,8 @@
                     <input id="cb" type="checkbox"> J'accepte que mes informations servent à me spammer
                 </label>
             <button id="envoi" type="submit" class="pure-button pure-button-primary">Envoyer</button>
-             </div>
+            <span id="resultat"></span>
+        </div>
 
         </form>
     </article>
